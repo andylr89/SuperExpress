@@ -78,6 +78,54 @@
     z-index: 2;
     display: none;
   }
+
+    /*Slider*/
+    .slider-wrapper{
+        position: relative;
+        max-width: 900px;
+        margin-top: 8rem;
+        margin-left: 10rem;
+        bottom: 5rem;
+      }
+      
+      .slider {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 .25rem .5rem #21212126;
+        border-radius: .5rem;
+      }
+    
+      .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+      }
+    
+      .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+    
+      .slider-nav a {
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: .75;
+        transition: opacity ease 250ms;
+      }
+    
+      .slider-nav a:hover {
+        opacity: 1;
+      }
   
   /* SHOWCASE */
   
@@ -96,33 +144,18 @@
   .btn:hover {
     opacity: 0.9;
   }
-  
+
   .showcase {
     width: 100%;
-    height: 550px;
-    background: url("./img/frutas-y-verduras1-jpg") no-repeat center center/cover;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: flex-end;
     padding-bottom: 50px;
-    margin-bottom: 20px;
+    
     color: #0a0a0a;
-    transform: (-50%, -50%);
-    animation: animate 10s infinite;
-  }
-
-   @keyframes animate {
-    33%{
-        background-image: url(./img/frutas-y-verduras3-jpg);
-    }
-    67%{
-        background-image: url(./img/frutas-y-verduras2-jpg);
-    }
-    100%{
-        background-image: url(./img/frutas-y-verduras1-jpg);
-    }
   }
   
   .showcase h2,
@@ -133,7 +166,7 @@
   .showcase .btn {
     margin-top: 20px;
   }
-  
+
   /* News Cards */
   .news-cards {
     display: grid;
@@ -160,30 +193,11 @@
     font-weight: bold;
   }
   
-  /* CARDS BANNER ONE */
-  .cards-banner-one {
-    width: 100%;
-    height: 350px;
-    background: url("./img/tech-red.jpg");
-    margin-bottom: 40px;
-  }
-  
-  .cards-banner-one .content {
-    width: 40%;
-    padding: 90px 0 0 30px;
-    color: #fff;
-  }
-  
-  .cards-banner-one p,
-  .cards-banner-two p {
-    margin: 10px 0 20px 0;
-  }
-  
+
   /* CARDS BANNER TWO*/
   .cards-banner-two {
     width: 100%;
-    height: 350px;
-    background: url("./img/image-five.jpg") no-repeat center center/cover;
+    height: 200px;
   }
   
   .cards-banner-two .content {
